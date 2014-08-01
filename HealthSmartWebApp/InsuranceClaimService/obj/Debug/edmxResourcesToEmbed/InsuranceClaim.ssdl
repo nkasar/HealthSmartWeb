@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InsuranceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Diagnosis">
+    <Key>
+      <PropertyRef Name="DiagCd" />
+    </Key>
+    <Property Name="DiagCd" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="DiagDesc" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="GenderCd" />
+    </Key>
+    <Property Name="GenderCd" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="GenderDesc" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaritialStatus">
+    <Key>
+      <PropertyRef Name="MaritialStatusCd" />
+    </Key>
+    <Property Name="MaritialStatusCd" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="MaritialStatusDesc" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedicalProcedure">
+    <Key>
+      <PropertyRef Name="ProcedureCd" />
+    </Key>
+    <Property Name="ProcedureCd" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="ProcedureDesc" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Occupation">
+    <Key>
+      <PropertyRef Name="OccupationCd" />
+    </Key>
+    <Property Name="OccupationCd" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="OccupationDesc" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleInitial" Type="varchar" MaxLength="50" />
+    <Property Name="DOB" Type="datetime" Nullable="false" />
+    <Property Name="GenderCd" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="MaritialStatusCd" Type="char" MaxLength="1" />
+    <Property Name="ReligionCd" Type="varchar" MaxLength="5" />
+    <Property Name="RaceCd" Type="varchar" MaxLength="5" />
+    <Property Name="OccupationCd" Type="varchar" MaxLength="2" />
+    <Property Name="Employer" Type="varchar" MaxLength="100" />
+    <Property Name="PassportNumber" Type="varchar" MaxLength="20" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="DateEntered" Type="datetime" Nullable="false" />
+    <Property Name="EnteredByUserID" Type="int" />
+    <Property Name="DateModified" Type="datetime" />
+    <Property Name="ModifiedByUserID" Type="int" />
+  </EntityType>
+  <EntityType Name="Physician">
+    <Key>
+      <PropertyRef Name="PhysicianID" />
+    </Key>
+    <Property Name="PhysicianID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PhysicianLastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhysicianFirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleInitial" Type="varchar" MaxLength="50" />
+    <Property Name="AddressLine1" Type="varchar" MaxLength="50" />
+    <Property Name="AddressLine2" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="20" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="PinCode" Type="varchar" MaxLength="20" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="20" />
+    <Property Name="BusinessPhone" Type="varchar" MaxLength="20" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="FaxNumber" Type="varchar" MaxLength="20" />
+    <Property Name="ProviderSpecialityCd" Type="varchar" MaxLength="5" />
+    <Property Name="PhysicianTypeCd" Type="char" MaxLength="1" />
+    <Property Name="GenderCd" Type="char" MaxLength="1" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="DateEntered" Type="datetime" />
+    <Property Name="EnteredByUserID" Type="int" />
+    <Property Name="DateModified" Type="datetime" />
+    <Property Name="ModifiedByUserID" Type="int" />
+  </EntityType>
+  <EntityType Name="PhysicianSpeciality">
+    <Key>
+      <PropertyRef Name="PhysicianSpecialityCd" />
+    </Key>
+    <Property Name="PhysicianSpecialityCd" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="PhysicianSpecialityDesc" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="PhysicianSpecialityDetailDesc" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Insurance.dbo.PolicyType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PolicyType">
+    <Key>
+      <PropertyRef Name="PolicyTypeCd" />
+      <PropertyRef Name="PolicyTypeDesc" />
+    </Key>
+    <Property Name="PolicyTypeCd" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="PolicyTypeDesc" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoverPrescription" Type="bit" />
+    <Property Name="CoverProcedure" Type="bit" />
+    <Property Name="CoverVisitCopay" Type="bit" />
+    <Property Name="CoverVision" Type="bit" />
+    <Property Name="CoverDental" Type="bit" />
+    <Property Name="MinCoverageAmount" Type="money" />
+    <Property Name="MaxCoverageAmount" Type="money" />
+  </EntityType>
+  <Association Name="FK_Patient_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="GenderCd" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="GenderCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_MaritialStatus">
+    <End Role="MaritialStatus" Type="Self.MaritialStatus" Multiplicity="0..1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaritialStatus">
+        <PropertyRef Name="MaritialStatusCd" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="MaritialStatusCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Occupation">
+    <End Role="Occupation" Type="Self.Occupation" Multiplicity="0..1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Occupation">
+        <PropertyRef Name="OccupationCd" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="OccupationCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Patient">
+    <End Role="Patient" Type="Self.Patient" Multiplicity="1" />
+    <End Role="Patient1" Type="Self.Patient" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Patient1">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Physician_PhysicianSpeciality">
+    <End Role="PhysicianSpeciality" Type="Self.PhysicianSpeciality" Multiplicity="0..1" />
+    <End Role="Physician" Type="Self.Physician" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhysicianSpeciality">
+        <PropertyRef Name="PhysicianSpecialityCd" />
+      </Principal>
+      <Dependent Role="Physician">
+        <PropertyRef Name="ProviderSpecialityCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Physician_PhysicianSpeciality1">
+    <End Role="PhysicianSpeciality" Type="Self.PhysicianSpeciality" Multiplicity="0..1" />
+    <End Role="Physician" Type="Self.Physician" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhysicianSpeciality">
+        <PropertyRef Name="PhysicianSpecialityCd" />
+      </Principal>
+      <Dependent Role="Physician">
+        <PropertyRef Name="ProviderSpecialityCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InsuranceModelStoreContainer">
+    <EntitySet Name="Diagnosis" EntityType="Self.Diagnosis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaritialStatus" EntityType="Self.MaritialStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedicalProcedure" EntityType="Self.MedicalProcedure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Occupation" EntityType="Self.Occupation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Physician" EntityType="Self.Physician" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhysicianSpeciality" EntityType="Self.PhysicianSpeciality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PolicyType" EntityType="Self.PolicyType" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PolicyType].[PolicyTypeCd] AS [PolicyTypeCd], 
+    [PolicyType].[PolicyTypeDesc] AS [PolicyTypeDesc], 
+    [PolicyType].[CoverPrescription] AS [CoverPrescription], 
+    [PolicyType].[CoverProcedure] AS [CoverProcedure], 
+    [PolicyType].[CoverVisitCopay] AS [CoverVisitCopay], 
+    [PolicyType].[CoverVision] AS [CoverVision], 
+    [PolicyType].[CoverDental] AS [CoverDental], 
+    [PolicyType].[MinCoverageAmount] AS [MinCoverageAmount], 
+    [PolicyType].[MaxCoverageAmount] AS [MaxCoverageAmount]
+    FROM [dbo].[PolicyType] AS [PolicyType]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Patient_Gender" Association="Self.FK_Patient_Gender">
+      <End Role="Gender" EntitySet="Gender" />
+      <End Role="Patient" EntitySet="Patient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_MaritialStatus" Association="Self.FK_Patient_MaritialStatus">
+      <End Role="MaritialStatus" EntitySet="MaritialStatus" />
+      <End Role="Patient" EntitySet="Patient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Occupation" Association="Self.FK_Patient_Occupation">
+      <End Role="Occupation" EntitySet="Occupation" />
+      <End Role="Patient" EntitySet="Patient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Patient" Association="Self.FK_Patient_Patient">
+      <End Role="Patient" EntitySet="Patient" />
+      <End Role="Patient1" EntitySet="Patient" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Physician_PhysicianSpeciality" Association="Self.FK_Physician_PhysicianSpeciality">
+      <End Role="PhysicianSpeciality" EntitySet="PhysicianSpeciality" />
+      <End Role="Physician" EntitySet="Physician" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Physician_PhysicianSpeciality1" Association="Self.FK_Physician_PhysicianSpeciality1">
+      <End Role="PhysicianSpeciality" EntitySet="PhysicianSpeciality" />
+      <End Role="Physician" EntitySet="Physician" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

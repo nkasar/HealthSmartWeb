@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d284fcde79464852bdb3d841d7937ae4" Name="Diagram1">
+        <EntityTypeShape EntityType="HealthSmartModel.Allergy" Width="1.5" PointX="15.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.AllergySeverity" Width="1.5" PointX="15.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.AllergyType" Width="1.5" PointX="15.75" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Country" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.DBVersion" Width="1.5" PointX="10.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Diagnosi" Width="1.5" PointX="23.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.DiagnosisCategory" Width="1.5" PointX="20.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.DiagnosticServiceSection" Width="1.5" PointX="13.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Disability" Width="1.5" PointX="6" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.DocumentType" Width="1.5" PointX="24.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.EmailMessage" Width="1.5" PointX="16.75" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Gender" Width="1.5" PointX="0.75" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Habit" Width="1.5" PointX="6" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Hospital" Width="1.5" PointX="17.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.HospitalLocation" Width="1.5" PointX="5.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.HospitalSpeciality" Width="1.5" PointX="18.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Immunization" Width="1.5" PointX="19.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Insurance" Width="1.5" PointX="24.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Laboratory" Width="1.5" PointX="13.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.MaritialStatu" Width="1.5" PointX="0.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.MedicalHistory" Width="1.5" PointX="20.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.MedicalProcedure" Width="1.5" PointX="9" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Medication" Width="1.5" PointX="24.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.MedicationDetail" Width="1.5" PointX="27" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Occupation" Width="1.5" PointX="0.75" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.OccupationalHazzard" Width="1.5" PointX="19.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.OtherHospital" Width="1.5" PointX="21" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PasswordSecurityQuestion" Width="1.5" PointX="18.75" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Patient" Width="1.5" PointX="3" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientAllergy" Width="1.5" PointX="18" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientAssociatedParty" Width="1.5" PointX="24.75" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientDemographic" Width="1.5" PointX="5.25" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientDiagnosi" Width="1.5" PointX="26" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientDisability" Width="1.5" PointX="8.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientDocument" Width="1.5" PointX="20.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientGeneralHistory" Width="1.5" PointX="26.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientGuarantor" Width="1.5" PointX="26.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientHabit" Width="1.5" PointX="8.25" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientImmunization" Width="1.5" PointX="22" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientInpatientVisitDailyRecord" Width="1.5" PointX="26.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientInpatientVisitRecordParameter" Width="1.5" PointX="22" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientInsurance" Width="1.5" PointX="27.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientLogin" Width="1.5" PointX="17.75" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientMedicalHistory" Width="1.5" PointX="23" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientMedicalProcedure" Width="1.5" PointX="11.25" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientMedicalReferal" Width="1.5" PointX="5.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientMedicalReferalRequest" Width="1.5" PointX="28.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientMedication" Width="1.5" PointX="14.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientMedicationDetail" Width="1.5" PointX="17" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientMessage" Width="1.5" PointX="11.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientOccupationalHazzard" Width="1.5" PointX="22" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientPhysiotherapy" Width="1.5" PointX="28.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientRecurringVisit" Width="1.5" PointX="28.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientVisionCare" Width="1.5" PointX="14.25" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientVisitPayment" Width="1.5" PointX="29.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PatientVitalSign" Width="1.5" PointX="29.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PaymentMethod" Width="1.5" PointX="19.75" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Physician" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PhysicianLogin" Width="1.5" PointX="21.75" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PhysicianMessage" Width="1.5" PointX="11.25" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PhysicianSpeciality" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PhysicianType" Width="1.5" PointX="30.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PhysioTherapy" Width="1.5" PointX="13.75" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PMRWorkFlow" Width="1.5" PointX="30.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PMRWorkFlowQueueManager" Width="1.5" PointX="30.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.ProcedurePractitionerType" Width="1.5" PointX="23.75" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Race" Width="1.5" PointX="0.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Relationship" Width="1.5" PointX="25.75" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Religion" Width="1.5" PointX="0.75" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.ReportType" Width="1.5" PointX="30.75" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.SpecimenSource" Width="1.5" PointX="13.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.Staff" Width="1.5" PointX="6" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.StaffCategory" Width="1.5" PointX="3.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.State" Width="1.5" PointX="27.75" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.sysdiagram" Width="1.5" PointX="30.75" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.UnitOfMeasure" Width="1.5" PointX="31.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.VisionCare" Width="1.5" PointX="12" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.VisitRecordParameter" Width="1.5" PointX="19.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.VisitType" Width="1.5" PointX="31.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.YearCalendar" Width="1.5" PointX="15.75" PointY="33.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.PhysicianLoginHistory" Width="1.5" PointX="32.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientAccident" Width="1.5" PointX="17.75" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientAllergy" Width="1.5" PointX="32.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientAssociatedParty" Width="1.5" PointX="32.75" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientDemographic" Width="1.5" PointX="29.75" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientDetail" Width="1.5" PointX="33.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientDiagnosis" Width="1.5" PointX="8.75" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientDisability" Width="1.5" PointX="10.75" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientGuarantor" Width="1.5" PointX="12.75" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientImmunization" Width="1.5" PointX="19.75" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientInpatientVisit" Width="1.5" PointX="21.75" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientInpatientVisitDailyRecord" Width="1.5" PointX="23.75" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientInsurance" Width="1.5" PointX="25.75" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientMedicalHistory" Width="1.5" PointX="0.75" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientMedicalProcedure" Width="1.5" PointX="34.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientMedicalReferal" Width="1.5" PointX="14.75" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientMedication" Width="1.5" PointX="34.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientPhysiotherapy" Width="1.5" PointX="35.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientRadiology" Width="1.5" PointX="35.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientVisit" Width="1.5" PointX="36.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientVitalSign" Width="1.5" PointX="36.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_Physician" Width="1.5" PointX="37.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PhysicianMessage" Width="1.5" PointX="2.75" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PhysicianSchedule" Width="1.5" PointX="16.75" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_StaffList" Width="1.5" PointX="37.75" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_StaffSchedule" Width="1.5" PointX="27.75" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HealthSmartModel.vwPatientLaboratory" Width="1.5" PointX="37.75" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientAllergy_Allergy" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientAllergy_AllergySeverity" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientAllergy_AllergyType" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientDiagnosis_Diagnosis" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientDisability_Disability" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Patient_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Staff_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientHabit_Habit" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Hospital_Hospital" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_OtherHospitals_HospitalSpeciality" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientImmunization_Immunization" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Patient_MaritialStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedicalHistory_MedicalHistory" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedicalProcedure_MedicalProcedure" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_MedicationDetail_Medication" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Patient_Occupation" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientOccupationalHazzard_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_OtherHospitals_OtherHospitals" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Patient_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Patient_Race" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Patient_Religion" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientDemographic_PatientDemographic" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientDisability_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientHabit_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedicalProcedure_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedicalReferal_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMessage_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PhysicianMessage_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientInpatientVisitRecordParameter_VisitRecordParameter" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedicalProcedure_PatientMedicalProcedure" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedicalReferal_Physician" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedicalReferal_Physician1" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedication_PatientMedication" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMedicationDetail_PatientMedication" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientMessage_Physician" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientVisionCare_Physician" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientVisionCare_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PatientVisionCare_VisionCare" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Physician_PhysicianSpeciality" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Physician_PhysicianSpeciality1" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_PhysicianMessage_Physician" ManuallyRouted="false" />
+        <AssociationConnector Association="HealthSmartModel.FK_Staff_StaffCategory" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HealthSmartModel.vw_PatientInsuranceClaim" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

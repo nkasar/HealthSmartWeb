@@ -1,0 +1,14 @@
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\obj\Debug\InsuranceClaimService.Resources.resources
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\obj\Debug\InsuranceClaimService.vbproj.GenerateResource.Cache
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\bin\InsuranceClaimService.dll.config
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\bin\InsuranceClaimService.dll
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\bin\InsuranceClaimService.pdb
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\bin\InsuranceClaimService.xml
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\obj\Debug\InsuranceClaimService.dll
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\obj\Debug\InsuranceClaimService.xml
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\obj\Debug\InsuranceClaimService.pdb
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\bin\EntityFramework.dll
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\bin\EntityFramework.SqlServer.dll
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\bin\EntityFramework.xml
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\bin\EntityFramework.SqlServer.xml
+C:\Products\HealthSmartWeb\HealthSmartWebApp\InsuranceClaimService\obj\Debug\InsuranceClaimService.vbprojResolveAssemblyReference.cache

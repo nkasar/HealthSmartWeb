@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InsuranceModelStoreContainer" CdmEntityContainer="InsuranceEntities">
+    <EntitySetMapping Name="Diagnosis">
+      <EntityTypeMapping TypeName="InsuranceModel.Diagnosi">
+        <MappingFragment StoreEntitySet="Diagnosis">
+          <ScalarProperty Name="DiagCd" ColumnName="DiagCd" />
+          <ScalarProperty Name="DiagDesc" ColumnName="DiagDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="InsuranceModel.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="GenderCd" ColumnName="GenderCd" />
+          <ScalarProperty Name="GenderDesc" ColumnName="GenderDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaritialStatus">
+      <EntityTypeMapping TypeName="InsuranceModel.MaritialStatu">
+        <MappingFragment StoreEntitySet="MaritialStatus">
+          <ScalarProperty Name="MaritialStatusCd" ColumnName="MaritialStatusCd" />
+          <ScalarProperty Name="MaritialStatusDesc" ColumnName="MaritialStatusDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicalProcedures">
+      <EntityTypeMapping TypeName="InsuranceModel.MedicalProcedure">
+        <MappingFragment StoreEntitySet="MedicalProcedure">
+          <ScalarProperty Name="ProcedureCd" ColumnName="ProcedureCd" />
+          <ScalarProperty Name="ProcedureDesc" ColumnName="ProcedureDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Occupations">
+      <EntityTypeMapping TypeName="InsuranceModel.Occupation">
+        <MappingFragment StoreEntitySet="Occupation">
+          <ScalarProperty Name="OccupationCd" ColumnName="OccupationCd" />
+          <ScalarProperty Name="OccupationDesc" ColumnName="OccupationDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="InsuranceModel.Patient">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="GenderCd" ColumnName="GenderCd" />
+          <ScalarProperty Name="MaritialStatusCd" ColumnName="MaritialStatusCd" />
+          <ScalarProperty Name="ReligionCd" ColumnName="ReligionCd" />
+          <ScalarProperty Name="RaceCd" ColumnName="RaceCd" />
+          <ScalarProperty Name="OccupationCd" ColumnName="OccupationCd" />
+          <ScalarProperty Name="Employer" ColumnName="Employer" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+          <ScalarProperty Name="EnteredByUserID" ColumnName="EnteredByUserID" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="ModifiedByUserID" ColumnName="ModifiedByUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Physicians">
+      <EntityTypeMapping TypeName="InsuranceModel.Physician">
+        <MappingFragment StoreEntitySet="Physician">
+          <ScalarProperty Name="PhysicianID" ColumnName="PhysicianID" />
+          <ScalarProperty Name="PhysicianLastName" ColumnName="PhysicianLastName" />
+          <ScalarProperty Name="PhysicianFirstName" ColumnName="PhysicianFirstName" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="BusinessPhone" ColumnName="BusinessPhone" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="ProviderSpecialityCd" ColumnName="ProviderSpecialityCd" />
+          <ScalarProperty Name="PhysicianTypeCd" ColumnName="PhysicianTypeCd" />
+          <ScalarProperty Name="GenderCd" ColumnName="GenderCd" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+          <ScalarProperty Name="EnteredByUserID" ColumnName="EnteredByUserID" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="ModifiedByUserID" ColumnName="ModifiedByUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhysicianSpecialities">
+      <EntityTypeMapping TypeName="InsuranceModel.PhysicianSpeciality">
+        <MappingFragment StoreEntitySet="PhysicianSpeciality">
+          <ScalarProperty Name="PhysicianSpecialityCd" ColumnName="PhysicianSpecialityCd" />
+          <ScalarProperty Name="PhysicianSpecialityDesc" ColumnName="PhysicianSpecialityDesc" />
+          <ScalarProperty Name="PhysicianSpecialityDetailDesc" ColumnName="PhysicianSpecialityDetailDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolicyTypes">
+      <EntityTypeMapping TypeName="InsuranceModel.PolicyType">
+        <MappingFragment StoreEntitySet="PolicyType">
+          <ScalarProperty Name="PolicyTypeCd" ColumnName="PolicyTypeCd" />
+          <ScalarProperty Name="PolicyTypeDesc" ColumnName="PolicyTypeDesc" />
+          <ScalarProperty Name="CoverPrescription" ColumnName="CoverPrescription" />
+          <ScalarProperty Name="CoverProcedure" ColumnName="CoverProcedure" />
+          <ScalarProperty Name="CoverVisitCopay" ColumnName="CoverVisitCopay" />
+          <ScalarProperty Name="CoverVision" ColumnName="CoverVision" />
+          <ScalarProperty Name="CoverDental" ColumnName="CoverDental" />
+          <ScalarProperty Name="MinCoverageAmount" ColumnName="MinCoverageAmount" />
+          <ScalarProperty Name="MaxCoverageAmount" ColumnName="MaxCoverageAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

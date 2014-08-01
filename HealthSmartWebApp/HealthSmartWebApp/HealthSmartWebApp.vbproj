@@ -1,0 +1,1116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1521B60B-955B-44B5-86C4-85A6520B4385}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HealthSmartWebApp</RootNamespace>
+    <AssemblyName>HealthSmartWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>HealthSmartWebApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>HealthSmartWebApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="Controllers\AccountController.vb" />
+    <Compile Include="Controllers\HospitalController.vb" />
+    <Compile Include="Controllers\InsuranceClaimController.vb" />
+    <Compile Include="Controllers\LoginController.vb" />
+    <Compile Include="Controllers\MasterDataController.vb" />
+    <Compile Include="Controllers\PatientController.vb" />
+    <Compile Include="Controllers\PhysicianController.vb" />
+    <Compile Include="Data\Allergy.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AllergySeverity.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AllergyType.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Country.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DBVersion.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Diagnosi.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DiagnosisCategory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DiagnosticServiceSection.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Disability.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DocumentType.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EmailMessage.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Gender.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Habit.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HealthSmart.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthSmart.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HealthSmart.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthSmart.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HealthSmart.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Hospital.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HospitalLocation.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\HospitalSpeciality.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Immunization.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Insurance.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Laboratory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MaritialStatu.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MedicalHistory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MedicalProcedure.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Medication.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MedicationDetail.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Occupation.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OccupationalHazzard.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OtherHospital.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PasswordSecurityQuestion.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Patient.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientAllergy.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientAssociatedParty.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientDemographic.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientDiagnosi.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientDisability.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientDocument.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientGeneralHistory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientGuarantor.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientHabit.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientImmunization.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientInpatientVisitDailyRecord.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientInpatientVisitRecordParameter.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientInsurance.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientLogin.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientMedicalHistory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientMedicalProcedure.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientMedicalReferal.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientMedicalReferalRequest.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientMedication.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientMedicationDetail.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientMessage.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientOccupationalHazzard.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientPhysiotherapy.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientRecurringVisit.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientVisionCare.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientVisitPayment.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PatientVitalSign.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PaymentMethod.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Physician.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhysicianLogin.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhysicianLoginHistory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhysicianMessage.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhysicianSpeciality.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhysicianType.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PhysioTherapy.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PMRWorkFlow.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PMRWorkFlowQueueManager.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProcedurePractitionerType.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Race.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Relationship.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Religion.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ReportType.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SpecimenSource.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Staff.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StaffCategory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\State.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sysdiagram.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UnitOfMeasure.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_AuthenticateUserPatient_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetAbnormalFlag_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetAdmissionType_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetAllergyList_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetAllergySeverity_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetAllergyType_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetAmbulatoryStatus_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetCountry_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetDentalProcedure_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetDiagnosisCategory_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetDiagnosis_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetDiagnosticServiceSection_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetDisability_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetDocumentType_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetEmailMessage_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetExternalPhysicianList_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetGender_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHabit_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalAvailableRoomBed_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalLocationDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalLocation_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalRoomBedByLocation_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalRoomBed_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalRoomType_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalRoom_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetHospitalSpeciality_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetImmunization_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetInPatientVisitByVisitID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetInpatientVisitList_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetInsuranceDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetInsurance_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetInternalPhysicianList_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetLaboratory_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetMaritialStatus_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetMedicalHistory_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetMedicalLabDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetMedicalLab_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetMedicalProcedure_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetMedicationDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetMedication_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetOccupationalHazzard_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetOccupation_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetOtherHospitalDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetOutpatientVisitByVisitID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPasswordSecurityQuestion_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientAccident_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientAllergy_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientAssociatedParty_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDemographic_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDentalProcByDentalProcID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDentalProcedure_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDiagnosisByDiagnosisID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDiagnosis_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDisability_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDocumentByDocumentID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientDocument_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientGeneralHistory_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientGuarantor_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientHabit_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientImmunizationByImmunizationID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientImmunization_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientInpatientVisitDailyRecord_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientInpatientVisitRecordParameter_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientInsurance_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientLaboratoryByLaboratoryID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientLaboratory_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientList_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMedicalHistory_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMedicalProcedure_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMedicalReferalByReferalID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMedicalReferal_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMedicationByMedicationID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMedicationDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMedication_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMedProcedureByProcedureID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientMessage_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientOccupationalHazzard_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientOutpatientVisit_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientPhysiotheraphyByPhysiotherapyID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientPhysiotherapy_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientPreference_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientRadiologyByRadiologyID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientRadiology_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientRecurringVisitByRecurringVisitID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientRecurringVisit_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientVisionCareByVisionCareID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientVisionCare_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientVisitPayment_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientVitalSignByVisitID_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPatientVitalSign_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPaymentMethod_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPharmacyDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPharmacy_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPhysicianList_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPhysicianMessage_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPhysicianSpeciality_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPhysicianType_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPhysicianVisit_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPhysician_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPhysiotherapy_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetPMRReports_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetProcedurePractitionerType_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetProcedure_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetRace_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetRadiologyLabDetail_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetRadiologyLabList_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetRadiology_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetRelationship_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetReligion_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetSpecimenSource_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetStaffCategory_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetState_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetUnitOfMeasure_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetVisionCare_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetVisitReason_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetVisitRecordParameter_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetVisitType_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\usp_GetYearCalendar_Result.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\VisionCare.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\VisitRecordParameter.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\VisitType.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vwPatientLaboratory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientAccident.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientAllergy.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientAssociatedParty.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientDemographic.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientDetail.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientDiagnosis.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientDisability.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientGuarantor.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientImmunization.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientInpatientVisit.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientInpatientVisitDailyRecord.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientInsurance.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientInsuranceClaim.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientMedicalHistory.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientMedicalProcedure.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientMedicalReferal.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientMedication.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientPhysiotherapy.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientRadiology.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientVisit.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PatientVitalSign.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_Physician.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PhysicianMessage.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_PhysicianSchedule.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_StaffList.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\vw_StaffSchedule.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\YearCalendar.vb">
+      <DependentUpon>HealthSmart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.vb" />
+    <Compile Include="Models\AllergyViewModel.vb" />
+    <Compile Include="Models\CommonDataViewModel.vb" />
+    <Compile Include="Models\DiagnosisViewModel.vb" />
+    <Compile Include="Models\HospitalViewModel.vb" />
+    <Compile Include="Models\IdentityModels.vb" />
+    <Compile Include="Models\ImmunizationViewModel.vb" />
+    <Compile Include="Models\InsuranceViewModel.vb" />
+    <Compile Include="Models\MedicalProcedureViewModel.vb" />
+    <Compile Include="Models\MedicationViewModel.vb" />
+    <Compile Include="Models\PatientDiagnosisViewModel.vb" />
+    <Compile Include="Models\PatientInsuranceClaimViewModel.vb" />
+    <Compile Include="Models\PatientInsuranceViewModel.vb" />
+    <Compile Include="Models\PatientMedicationViewModel.vb" />
+    <Compile Include="Models\PatientViewModel.vb" />
+    <Compile Include="Models\PhysicianViewModel.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Service References\InsuranceClaimServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <EntityDeploy Include="Data\HealthSmart.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HealthSmart.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data\HealthSmart.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HealthSmart.edmx</DependentUpon>
+      <LastGenOutput>HealthSmart.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Data\HealthSmart.edmx.diagram">
+      <DependentUpon>HealthSmart.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\HealthSmart.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HealthSmart.edmx</DependentUpon>
+      <LastGenOutput>HealthSmart.vb</LastGenOutput>
+    </Content>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Service References\InsuranceClaimServiceReference\HealthSmartWebApp.InsuranceClaimServiceReference.InsuranceClaim.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\InsuranceClaimServiceReference\InsuranceClaimService.disco" />
+    <None Include="Service References\InsuranceClaimServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\InsuranceClaimServiceReference\configuration.svcinfo" />
+    <None Include="Service References\InsuranceClaimServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Views\Account\_ChangePasswordPartial.vbhtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.vbhtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.vbhtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.vbhtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.vbhtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.vbhtml" />
+    <Content Include="Views\Account\Login.vbhtml" />
+    <Content Include="Views\Account\Manage.vbhtml" />
+    <Content Include="Views\Account\Register.vbhtml" />
+    <Content Include="Views\Shared\_LoginPartial.vbhtml" />
+    <Content Include="Views\Patient\AddPatient.vbhtml" />
+    <Content Include="Views\Hospital\Hospital.vbhtml" />
+    <Content Include="Views\Physician\AddPhysician.vbhtml" />
+    <Content Include="Views\Physician\PhysicianList.vbhtml" />
+    <Content Include="Views\Patient\PatientList.vbhtml" />
+    <Content Include="Views\MasterData\AllergyList.vbhtml" />
+    <Content Include="Views\MasterData\AddAllergy.vbhtml" />
+    <Content Include="Views\MasterData\DiagnosisList.vbhtml" />
+    <Content Include="Views\MasterData\AddDiagnosis.vbhtml" />
+    <Content Include="Views\MasterData\InsuranceList.vbhtml" />
+    <Content Include="Views\MasterData\AddInsurance.vbhtml" />
+    <Content Include="Views\Patient\AddPatientInsurance.vbhtml" />
+    <Content Include="Views\Patient\EditPatientInsurance.vbhtml" />
+    <Content Include="Views\Patient\EditPatient.vbhtml" />
+    <Content Include="Views\Patient\AddPatientDiagnosis.vbhtml" />
+    <Content Include="Views\Patient\AddPatientMedication.vbhtml" />
+    <Content Include="Views\Physician\EditPhysician.vbhtml" />
+    <Content Include="Views\MasterData\AddMedication.vbhtml" />
+    <Content Include="Views\MasterData\MedicationList.vbhtml" />
+    <Content Include="Views\MasterData\DeleteMedication.vbhtml" />
+    <None Include="Service References\InsuranceClaimServiceReference\InsuranceClaimService.wsdl" />
+    <None Include="Service References\InsuranceClaimServiceReference\InsuranceClaimService.xsd" />
+    <None Include="Service References\InsuranceClaimServiceReference\InsuranceClaimService1.xsd" />
+    <None Include="Service References\InsuranceClaimServiceReference\InsuranceClaimService2.xsd" />
+    <Content Include="Views\InsuranceClaim\PatientInsuranceClaim.vbhtml" />
+    <Content Include="Views\InsuranceClaim\ProcessPatientInsuranceClaim.vbhtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Home\About.vbhtml" />
+    <Content Include="Views\Home\Contact.vbhtml" />
+    <Content Include="Views\Home\Index.vbhtml" />
+    <Content Include="Views\Shared\Error.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\InsuranceClaimServiceReference\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58766</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58766/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

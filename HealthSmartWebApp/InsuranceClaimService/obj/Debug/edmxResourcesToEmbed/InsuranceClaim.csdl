@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InsuranceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Diagnosi">
+    <Key>
+      <PropertyRef Name="DiagCd" />
+    </Key>
+    <Property Name="DiagCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DiagDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="GenderCd" />
+    </Key>
+    <Property Name="GenderCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GenderDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Patients" Relationship="Self.FK_Patient_Gender" FromRole="Gender" ToRole="Patient" />
+  </EntityType>
+  <EntityType Name="MaritialStatu">
+    <Key>
+      <PropertyRef Name="MaritialStatusCd" />
+    </Key>
+    <Property Name="MaritialStatusCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaritialStatusDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Patients" Relationship="Self.FK_Patient_MaritialStatus" FromRole="MaritialStatus" ToRole="Patient" />
+  </EntityType>
+  <EntityType Name="MedicalProcedure">
+    <Key>
+      <PropertyRef Name="ProcedureCd" />
+    </Key>
+    <Property Name="ProcedureCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProcedureDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Occupation">
+    <Key>
+      <PropertyRef Name="OccupationCd" />
+    </Key>
+    <Property Name="OccupationCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OccupationDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Patients" Relationship="Self.FK_Patient_Occupation" FromRole="Occupation" ToRole="Patient" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleInitial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GenderCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaritialStatusCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ReligionCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="RaceCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="OccupationCd" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Employer" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PassportNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="DateEntered" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EnteredByUserID" Type="Int32" />
+    <Property Name="DateModified" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedByUserID" Type="Int32" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_Patient_Gender" FromRole="Patient" ToRole="Gender" />
+    <NavigationProperty Name="MaritialStatu" Relationship="Self.FK_Patient_MaritialStatus" FromRole="Patient" ToRole="MaritialStatus" />
+    <NavigationProperty Name="Occupation" Relationship="Self.FK_Patient_Occupation" FromRole="Patient" ToRole="Occupation" />
+    <NavigationProperty Name="Patient1" Relationship="Self.FK_Patient_Patient" FromRole="Patient" ToRole="Patient1" />
+    <NavigationProperty Name="Patient2" Relationship="Self.FK_Patient_Patient" FromRole="Patient1" ToRole="Patient" />
+  </EntityType>
+  <EntityType Name="Physician">
+    <Key>
+      <PropertyRef Name="PhysicianID" />
+    </Key>
+    <Property Name="PhysicianID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PhysicianLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhysicianFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleInitial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PinCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FaxNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ProviderSpecialityCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PhysicianTypeCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="GenderCd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="DateEntered" Type="DateTime" Precision="3" />
+    <Property Name="EnteredByUserID" Type="Int32" />
+    <Property Name="DateModified" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedByUserID" Type="Int32" />
+    <NavigationProperty Name="PhysicianSpeciality" Relationship="Self.FK_Physician_PhysicianSpeciality" FromRole="Physician" ToRole="PhysicianSpeciality" />
+    <NavigationProperty Name="PhysicianSpeciality1" Relationship="Self.FK_Physician_PhysicianSpeciality1" FromRole="Physician" ToRole="PhysicianSpeciality" />
+  </EntityType>
+  <EntityType Name="PhysicianSpeciality">
+    <Key>
+      <PropertyRef Name="PhysicianSpecialityCd" />
+    </Key>
+    <Property Name="PhysicianSpecialityCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhysicianSpecialityDesc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhysicianSpecialityDetailDesc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Physicians" Relationship="Self.FK_Physician_PhysicianSpeciality" FromRole="PhysicianSpeciality" ToRole="Physician" />
+    <NavigationProperty Name="Physicians1" Relationship="Self.FK_Physician_PhysicianSpeciality1" FromRole="PhysicianSpeciality" ToRole="Physician" />
+  </EntityType>
+  <EntityType Name="PolicyType">
+    <Key>
+      <PropertyRef Name="PolicyTypeCd" />
+      <PropertyRef Name="PolicyTypeDesc" />
+    </Key>
+    <Property Name="PolicyTypeCd" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PolicyTypeDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CoverPrescription" Type="Boolean" />
+    <Property Name="CoverProcedure" Type="Boolean" />
+    <Property Name="CoverVisitCopay" Type="Boolean" />
+    <Property Name="CoverVision" Type="Boolean" />
+    <Property Name="CoverDental" Type="Boolean" />
+    <Property Name="MinCoverageAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MaxCoverageAmount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <Association Name="FK_Patient_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="GenderCd" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="GenderCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_MaritialStatus">
+    <End Role="MaritialStatus" Type="Self.MaritialStatu" Multiplicity="0..1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaritialStatus">
+        <PropertyRef Name="MaritialStatusCd" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="MaritialStatusCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Occupation">
+    <End Role="Occupation" Type="Self.Occupation" Multiplicity="0..1" />
+    <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Occupation">
+        <PropertyRef Name="OccupationCd" />
+      </Principal>
+      <Dependent Role="Patient">
+        <PropertyRef Name="OccupationCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patient_Patient">
+    <End Role="Patient" Type="Self.Patient" Multiplicity="1" />
+    <End Role="Patient1" Type="Self.Patient" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Patient1">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Physician_PhysicianSpeciality">
+    <End Role="PhysicianSpeciality" Type="Self.PhysicianSpeciality" Multiplicity="0..1" />
+    <End Role="Physician" Type="Self.Physician" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhysicianSpeciality">
+        <PropertyRef Name="PhysicianSpecialityCd" />
+      </Principal>
+      <Dependent Role="Physician">
+        <PropertyRef Name="ProviderSpecialityCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Physician_PhysicianSpeciality1">
+    <End Role="PhysicianSpeciality" Type="Self.PhysicianSpeciality" Multiplicity="0..1" />
+    <End Role="Physician" Type="Self.Physician" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhysicianSpeciality">
+        <PropertyRef Name="PhysicianSpecialityCd" />
+      </Principal>
+      <Dependent Role="Physician">
+        <PropertyRef Name="ProviderSpecialityCd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InsuranceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Diagnosis" EntityType="Self.Diagnosi" />
+    <EntitySet Name="Genders" EntityType="Self.Gender" />
+    <EntitySet Name="MaritialStatus" EntityType="Self.MaritialStatu" />
+    <EntitySet Name="MedicalProcedures" EntityType="Self.MedicalProcedure" />
+    <EntitySet Name="Occupations" EntityType="Self.Occupation" />
+    <EntitySet Name="Patients" EntityType="Self.Patient" />
+    <EntitySet Name="Physicians" EntityType="Self.Physician" />
+    <EntitySet Name="PhysicianSpecialities" EntityType="Self.PhysicianSpeciality" />
+    <EntitySet Name="PolicyTypes" EntityType="Self.PolicyType" />
+    <AssociationSet Name="FK_Patient_Gender" Association="Self.FK_Patient_Gender">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Patient" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_MaritialStatus" Association="Self.FK_Patient_MaritialStatus">
+      <End Role="MaritialStatus" EntitySet="MaritialStatus" />
+      <End Role="Patient" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Occupation" Association="Self.FK_Patient_Occupation">
+      <End Role="Occupation" EntitySet="Occupations" />
+      <End Role="Patient" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patient_Patient" Association="Self.FK_Patient_Patient">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Patient1" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Physician_PhysicianSpeciality" Association="Self.FK_Physician_PhysicianSpeciality">
+      <End Role="PhysicianSpeciality" EntitySet="PhysicianSpecialities" />
+      <End Role="Physician" EntitySet="Physicians" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Physician_PhysicianSpeciality1" Association="Self.FK_Physician_PhysicianSpeciality1">
+      <End Role="PhysicianSpeciality" EntitySet="PhysicianSpecialities" />
+      <End Role="Physician" EntitySet="Physicians" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
